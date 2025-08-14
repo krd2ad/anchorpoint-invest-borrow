@@ -9,10 +9,13 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  base: "/anchorpoint-invest-borrow/", // 👈 Set base path for GitHub Pages
+  build: {
+    outDir: "docs", // 👈 Build output to /docs so GH Pages can serve from there
+  },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === "development" && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
