@@ -1,0 +1,13 @@
+{
+  "name": "Anchor Point Lending",
+  "short_name": "APL",
+  "start_url": "/anchorpoint-invest-borrow/",
+  "display": "standalone",
+  "background_color": "#0A1428",
+  "theme_color": "#0A1428",
+  "icons": [
+    { "src": "/anchorpoint-invest-borrow/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/anchorpoint-invest-borrow/favicon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/anchorpoint-invest-borrow/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}
