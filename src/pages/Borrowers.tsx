@@ -3,54 +3,61 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import LeadForm from "@/components/ui/lead-form";
 import { Clock, DollarSign, TrendingUp, Shield, CheckCircle, ArrowRight } from "lucide-react";
 import borrowersImage from "@/assets/borrowers-bg.jpg";
+import { useEffect } from "react";
 
 const Borrowers = () => {
+  useEffect(() => {
+    document.title = "Private Real Estate Loans for Investors | Anchor Point Lending";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Close in days, not months. Asset-based lending for fix-and-flip, new construction, and rental properties. Partner with Anchor Point Lending for fast, flexible funding.');
+    }
+  }, []);
+
   const benefits = [
     {
       icon: Clock,
-      title: "Fast Funding",
-      description: "Get approved in 24-48 hours and funded within 5-7 days"
+      title: "Funding in days, not weeks",
+      description: "Get approved and funded faster than traditional lenders"
     },
     {
       icon: DollarSign,
-      title: "Competitive Rates",
-      description: "Flexible terms and competitive rates tailored to your project"
+      title: "No unnecessary hurdles",
+      description: "Asset-focused underwriting process"
     },
     {
       icon: TrendingUp,
-      title: "Asset-Based Lending",
-      description: "Focused on the property value and deal potential, not just credit scores"
+      title: "Terms that match your project",
+      description: "Timeline and exit strategy aligned financing"
     },
     {
       icon: Shield,
-      title: "Experienced Team",
-      description: "Real estate investors helping investors with proven expertise"
+      title: "Friendly, knowledgeable team",
+      description: "Team who understands investor needs"
     }
   ];
 
-  const loanTypes = [
+  const projectTypes = [
     {
-      title: "Bridge Loans",
-      description: "Short-term financing to bridge the gap between buying and selling",
-      features: ["6-24 month terms", "Up to 80% LTV", "Quick closings", "Interest-only payments"]
-    },
-    {
-      title: "Fix & Flip Loans",
+      title: "Fix-and-Flip",
       description: "Financing for property acquisition and renovation costs",
       features: ["Purchase + rehab costs", "Up to 90% ARV", "12-month terms", "Draw schedule available"]
     },
     {
-      title: "Commercial Loans",
-      description: "Financing for income-producing commercial properties",
-      features: ["$500K - $10M+", "Up to 75% LTV", "Competitive rates", "Various property types"]
+      title: "New Construction",
+      description: "Construction loans for ground-up development projects",
+      features: ["Land + construction costs", "Progress-based draws", "18-24 month terms", "Experienced oversight"]
+    },
+    {
+      title: "Rental Property Acquisitions",
+      description: "Financing for investment property purchases",
+      features: ["Up to 80% LTV", "Cash-out refinance options", "Long-term rental focus", "Quick closings"]
+    },
+    {
+      title: "Bridge Loans",
+      description: "Short-term financing to bridge gaps between buying and selling",
+      features: ["6-24 month terms", "Up to 80% LTV", "Quick closings", "Interest-only payments"]
     }
-  ];
-
-  const process = [
-    { step: "1", title: "Application", description: "Submit your loan application with property details" },
-    { step: "2", title: "Review", description: "Our team reviews and provides preliminary approval within 24 hours" },
-    { step: "3", title: "Underwriting", description: "Property evaluation and final loan terms negotiation" },
-    { step: "4", title: "Funding", description: "Close and receive funds typically within 5-7 days" }
   ];
 
   return (
@@ -64,14 +71,14 @@ const Borrowers = () => {
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Fast, Flexible Real Estate Financing
+              Fast, Flexible Capital for Your Next Deal
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
-              Asset-based lending solutions designed by investors, for investors. Get the capital you need to close deals quickly.
+              We know every day counts in real estate. That's why we've built our lending process for speed and clarity. Our focus is on the property's potential — not endless red tape.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg">
-                Apply Now
+                Submit Loan Request
               </Button>
               <Button variant="outline" size="lg" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
                 Learn More
@@ -116,24 +123,24 @@ const Borrowers = () => {
         </div>
       </section>
 
-      {/* Loan Types */}
+      {/* Types of Projects We Fund */}
       <section className="py-16 bg-secondary/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Loan Products</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Types of Projects We Fund</h2>
             <p className="text-xl text-muted-foreground">Tailored financing solutions for every real estate investment strategy</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {loanTypes.map((loan, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projectTypes.map((project, index) => (
               <Card key={index} className="hover:shadow-card transition-shadow">
                 <CardHeader>
-                  <CardTitle className="text-xl">{loan.title}</CardTitle>
-                  <p className="text-muted-foreground">{loan.description}</p>
+                  <CardTitle className="text-xl">{project.title}</CardTitle>
+                  <p className="text-muted-foreground">{project.description}</p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    {loan.features.map((feature, featureIndex) => (
+                    {project.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-success" />
                         <span className="text-sm">{feature}</span>
@@ -151,35 +158,13 @@ const Borrowers = () => {
         </div>
       </section>
 
-      {/* Process */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Simple Process</h2>
-            <p className="text-xl text-muted-foreground">From application to funding in just a few simple steps</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {process.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-accent-foreground">{item.step}</span>
-                </div>
-                <h3 className="font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Lead Form Section */}
       <section className="py-16 bg-gradient-to-r from-primary to-primary-hover">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="text-primary-foreground">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Submit your loan request today and keep your project moving.</h2>
                 <p className="text-xl mb-6 text-primary-foreground/90">
                   Join thousands of investors who trust Anchor Point Lending for their real estate financing needs.
                 </p>

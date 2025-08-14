@@ -1,8 +1,17 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import LeadForm from "@/components/ui/lead-form";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Calendar } from "lucide-react";
+import { useEffect } from "react";
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Contact Anchor Point Lending | Real Estate Lending & Investing";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Get in touch with Anchor Point Lending. Whether you\'re seeking a loan or looking to invest in secured real estate lending, our team is ready to help.');
+    }
+  }, []);
+
   const contactMethods = [
     {
       icon: Phone,
@@ -58,10 +67,10 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Contact Us
+              Let's Connect
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
-              Ready to get started? Our expert team is here to help with your real estate financing and investment needs.
+              Whether you're ready to start a loan, invest in secured real estate lending, or just have questions — we're here to help.
             </p>
           </div>
         </div>
@@ -141,7 +150,7 @@ const Contact = () => {
               {/* Form */}
               <div>
                 <LeadForm 
-                  title="Send Us a Message" 
+                  title="Send Message" 
                   subtitle="We'll respond within 24 hours"
                   type="general"
                 />
@@ -204,56 +213,18 @@ const Contact = () => {
                     </div>
                   </CardContent>
                 </Card>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Office Visits</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      We welcome in-person meetings at our Manhattan headquarters. 
-                      Please schedule an appointment in advance.
-                    </p>
-                    <div className="space-y-2">
-                      <div className="flex items-start space-x-2">
-                        <MapPin className="w-4 h-4 text-accent mt-1" />
-                        <div>
-                          <div className="font-medium">123 Financial District</div>
-                          <div className="text-sm text-muted-foreground">New York, NY 10004</div>
-                        </div>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Clock className="w-4 h-4 text-accent" />
-                        <span className="text-sm text-muted-foreground">
-                          Visitor hours: Monday - Friday, 9:00 AM - 5:00 PM EST
-                        </span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Map Section (Placeholder) */}
-      <section className="py-16 bg-secondary/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4">Visit Our Manhattan Office</h3>
-            <p className="text-muted-foreground mb-8">
-              Located in the heart of the Financial District, we're easily accessible 
-              by subway, bus, and major highways.
-            </p>
-            <div className="bg-muted rounded-lg h-64 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-accent mx-auto mb-2" />
-                <p className="text-muted-foreground">Interactive map would be embedded here</p>
-                <p className="text-sm text-muted-foreground">123 Financial District, New York, NY 10004</p>
-              </div>
-            </div>
-          </div>
+      {/* Footer Line */}
+      <section className="py-8 bg-secondary/50">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-muted-foreground">
+            Anchor Point Lending — By Investors, For Investors
+          </p>
         </div>
       </section>
     </div>

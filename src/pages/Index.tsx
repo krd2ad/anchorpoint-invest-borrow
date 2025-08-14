@@ -14,15 +14,15 @@ const Index = () => {
   ];
 
   const borrowerBenefits = [
-    { icon: Clock, title: "Fast Funding", description: "Get approved in 24-48 hours, funded in 5-7 days" },
-    { icon: TrendingUp, title: "Asset-Based", description: "Focus on property value, not just credit scores" },
-    { icon: Shield, title: "Flexible Terms", description: "Customized loan structures for your project" }
+    { icon: Clock, title: "Speed You Can Count On", description: "Close in days, not months." },
+    { icon: TrendingUp, title: "Flexible Terms", description: "Asset-based lending that fits your strategy." },
+    { icon: Shield, title: "Investor-Friendly", description: "Designed for fix-and-flip, new construction, or rental properties." }
   ];
 
   const investorBenefits = [
-    { icon: TrendingUp, title: "Strong Returns", description: "Target returns of 8-15% annually" },
-    { icon: Shield, title: "Asset-Backed", description: "All investments secured by real estate" },
-    { icon: Users, title: "Professional Management", description: "Expert oversight and transparent reporting" }
+    { icon: TrendingUp, title: "Secured by Real Estate", description: "Every loan is backed by tangible assets." },
+    { icon: Shield, title: "Attractive Returns", description: "Earn competitive, predictable income." },
+    { icon: Users, title: "Self-Directed IRA Options", description: "Put your retirement funds to work." }
   ];
 
   const testimonials = [
@@ -54,23 +54,21 @@ const Index = () => {
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Real Estate Lending<br />
-              <span className="text-accent">By Investors, For Investors</span>
+              By Investors, For Investors — Your Trusted Real Estate Lending Partner
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto">
-              Fast, flexible financing for real estate investors and secure investment opportunities 
-              backed by real estate assets.
+              Fast, flexible funding for borrowers. Stable, secured returns for investors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link to="/borrowers">
                 <Button variant="hero" size="lg" className="w-full sm:w-auto">
-                  I Need Financing
+                  I'm a Borrower
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <Link to="/investors">
                 <Button variant="outline" size="lg" className="w-full sm:w-auto border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
-                  I Want to Invest
+                  I'm an Investor
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
@@ -95,11 +93,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Two Paths to Real Estate Success
+              Why Anchor Point Lending?
             </h2>
             <p className="text-xl text-muted-foreground mb-16">
-              Whether you need capital to close deals or want to invest in real estate-backed returns, 
-              we have the expertise and solutions to help you succeed.
+              At Anchor Point Lending, we bridge the gap between opportunity and capital. We're active real estate investors ourselves — we understand the urgency, the numbers, and the importance of clear communication. Whether you're funding your next project or seeking consistent, asset-backed returns, we're here to help.
             </p>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -140,7 +137,7 @@ const Index = () => {
                     <TrendingUp className="w-8 h-8 text-accent" />
                   </div>
                   <CardTitle className="text-2xl">For Investors</CardTitle>
-                  <p className="text-muted-foreground">Secure, asset-backed investment opportunities</p>
+                  <p className="text-muted-foreground">Secured, asset-backed investment opportunities</p>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4 mb-6">
@@ -167,47 +164,44 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Our Process */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                Why Choose Anchor Point Lending?
+                Our Process
               </h2>
-              <p className="text-xl text-muted-foreground">
-                Experience the difference of working with real estate professionals who understand your needs
-              </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-8 h-8 text-accent" />
+                  <span className="text-2xl font-bold text-accent">1</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Real Estate Expertise</h3>
+                <h3 className="text-xl font-semibold mb-4">Connect</h3>
                 <p className="text-muted-foreground">
-                  Our team consists of active real estate investors who understand market dynamics and investment strategies.
+                  Tell us about your project or investment goals.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Clock className="w-8 h-8 text-accent" />
+                  <span className="text-2xl font-bold text-accent">2</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Speed & Efficiency</h3>
+                <h3 className="text-xl font-semibold mb-4">Review</h3>
                 <p className="text-muted-foreground">
-                  Fast approvals and funding to help you close deals quickly when opportunities arise.
+                  We quickly evaluate your deal and terms.
                 </p>
               </div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Shield className="w-8 h-8 text-accent" />
+                  <span className="text-2xl font-bold text-accent">3</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Transparency & Trust</h3>
+                <h3 className="text-xl font-semibold mb-4">Fund</h3>
                 <p className="text-muted-foreground">
-                  Clear communication, honest dealings, and transparent processes in every transaction.
+                  We move fast to get your capital working.
                 </p>
               </div>
             </div>
@@ -257,7 +251,7 @@ const Index = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="text-primary-foreground">
                 <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                  Ready to Get Started?
+                  Let's talk about your next opportunity.
                 </h2>
                 <p className="text-xl mb-8 text-primary-foreground/90">
                   Whether you need financing for your next deal or want to invest in real estate-backed returns, 
@@ -284,7 +278,7 @@ const Index = () => {
               </div>
               <div>
                 <LeadForm 
-                  title="Get Started Today" 
+                  title="Contact Us" 
                   subtitle="Connect with our team for personalized solutions"
                   type="general"
                   className="bg-background"
